@@ -1,0 +1,18 @@
+
+Feature: Register on esri.com
+Considering [I'm not an esri.com user]
+When [I choose the email registration method]
+Then [I should be redirected to the email request page and then to the password fill page]
+Expected Result [The user's Hotmail mailbox should be loaded, pass a valid password, and redirect to the esri.com homepage]
+
+
+Test Case: 1
+Feature: User Authentication Background:
+Given the user is not yet registered on the website Scenario:
+Given the user is on the registration page
+When the user selects the registration method via email
+And the user specifies a username and accepts the terms of the resource
+And the user enters the correct email
+And the user enters the correct password
+Then the user must be registered
+And the user should be redirected to the main page already as a registered user
